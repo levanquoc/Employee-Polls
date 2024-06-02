@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import React, { useState } from 'react';
 import { useDispatch,useSelector } from 'react-redux';
 import { fetchAddQuestions } from  '../redux/actions/questionAction';
 import { useNavigate } from 'react-router-dom';
@@ -19,10 +19,10 @@ const New = () => {
     }
     dispatch(fetchAddQuestions(question))
       .then(() => {
-        navigate('/home'); 
+        navigate('/home'); // Điều hướng đến trang chủ hoặc trang mong muốn sau khi thành công
       })
       .catch((error) => {
-        alert('Error: ' + error);
+        alert('Error: ' + error); // Hiển thị alert nếu có lỗi
       });
   };
 

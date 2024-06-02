@@ -1,3 +1,4 @@
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useSelector, useDispatch} from 'react-redux';
 import { handleSaveQuestionAnswer } from '../redux/actions/questionAction';
@@ -14,10 +15,10 @@ const Question = () => {
     const oneQ = question?.optionOne?.votes?.length ?? -1;
     const oneT = question?.optionTwo?.votes?.length ?? -1;
     const handleChoose = (option) => {
-        const authUser = user.id;
+        const authedUser = user.id;
         const qid = questionId;
         const answer = option;
-        dispatch(handleSaveQuestionAnswer({ authUser, qid, answer }));
+        dispatch(handleSaveQuestionAnswer({ authedUser, qid, answer }));
         dispatch(fetchQuestions());
         alert("Choose OK")
     }

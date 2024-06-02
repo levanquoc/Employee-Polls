@@ -39,9 +39,9 @@ export const fetchAddQuestions = (newQuestion) => {
   };
 };
 
-export const handleSaveQuestionAnswer = ({ authUser, qid, answer }) => {
+export const handleSaveQuestionAnswer = ({ authedUser, qid, answer }) => {
   return (dispatch) => {
-    return _saveQuestionAnswer({ authUser, qid, answer })
+    return _saveQuestionAnswer({ authedUser, qid, answer })
       .then(() => {   
       })
       .catch((error) => {

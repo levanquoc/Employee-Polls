@@ -1,4 +1,4 @@
-import { RECEIVE_QUESTION } from '../actions/questionAction';  
+import { RECEIVE_QUESTION } from '../actions/questionAction';  // Đảm bảo đường dẫn đúng đến file action
 
 const initialState = {
 

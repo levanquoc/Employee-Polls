@@ -1,4 +1,4 @@
-
+// src/reducers/auth.js
 
 import { LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT, RECEIVE_USER } from '../actions/authAction';
 

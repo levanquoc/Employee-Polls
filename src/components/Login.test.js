@@ -1,4 +1,7 @@
-
+/**
+ * @jest-environment jsdom
+ */
+// tests/Login.test.js
 import React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';

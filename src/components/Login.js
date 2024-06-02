@@ -1,7 +1,8 @@
-import { useState } from 'react';
+// components/Login.js
+import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { login } from '../redux/actions/authAction';
-import { fetchQuestions } from '../redux/actions/questionAction';
+import { fetchQuestions } from '../redux/actions/questionAction'
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -11,25 +12,29 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setSubmit(true);
     dispatch(fetchQuestions());
+    setSubmit(true);
     dispatch(login(id, password))
       .then(() => {
         setSubmit(false);
       })
       .catch((error) => {
-        console.log(error);
-        setSubmit(false);
+        //alert(12)
       });
   };
 
   return (
     <div className="container">
       <form style={{ textAlign: 'center', margin: '1em 3em' }} onSubmit={handleSubmit}>
-        <h2>Employee</h2>
+        <h3>Employee</h3>
+        <img 
+          src="https://www.polly.ai/hs-fs/hubfs/Blog%20Images/Illustrations%20(blue,%20png)/Internal%20Comms%20Fun%204.png?width=2000&name=Internal%20Comms%20Fun%204.png"
+          alt="Internal Comms Fun" 
+          style={{ width: '50%', minWidth: '300px' }}
+        />
         <h3>Login</h3>
         <div className="form-group">
-          <label htmlFor="username">Username</label>
+          <label htmlFor="username">username</label>
           <input 
             className="form-control" 
             id="username" 
@@ -40,7 +45,7 @@ const Login = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">password</label>
           <input 
             type="password" 
             value={password} 

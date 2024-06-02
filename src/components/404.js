@@ -1,6 +1,6 @@
+import React from 'react';
 
-
-const Notfound = () => {
+const Question = () => {
 
   return (
     <div>
@@ -11,4 +11,4 @@ const Notfound = () => {
   );
 };
  
-export default Notfound;
+export default Question;
